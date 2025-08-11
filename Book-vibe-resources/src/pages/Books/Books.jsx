@@ -1,26 +1,35 @@
- import React, { use } from 'react';
+ import { Star } from 'lucide-react';
+import React, { use } from 'react';
 
 const Books = ({singleBook}) => {
     // const data = use(bookPromise);
 
     // console.log(data)
-    console.log(singleBook)
+    const {bookName, author,image,category,rating} = singleBook;
     return (
-         <div className="card bg-base-100 w-96 shadow-sm">
-  <figure>
-    <img
-      src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
-      alt="Shoes" />
-  </figure>
+         <div className="card bg-white w-96 shadow-sm border ">
+      <figure className='p-3 bg-gray-300 w-2/3 mx-auto mt-5'>
+          <div >
+            <img className='h-[166px] mt-10 mb-10' src= {image} alt="Shoes" />
+          </div>
+       </figure>
   <div className="card-body">
-    <h2 className="card-title">
-      Card Title
-      <div className="badge badge-secondary">NEW</div>
-    </h2>
-    <p>A card component has a figure, a body part, and inside body there are title and actions parts</p>
-    <div className="card-actions justify-end">
-      <div className="badge badge-outline">Fashion</div>
-      <div className="badge badge-outline">Products</div>
+     <div className='flex justify-between'>
+      <h2 className=" badge badge-secondary btn ">
+       Young Adult
+       </h2>
+      <div className="badge badge-secondary btn">Identity</div>
+    
+     </div>
+    <p className='font-bold text-2xl text-black'>{bookName}</p>
+
+    <p className='text-gray-500'>{author}</p>
+    <div className="card-actions  justify-between">
+      <div className="  text-black">{category}</div>
+       <div className='flex gap-2'>
+        <div className="  text-black">{rating} </div>
+      <div className='text-black'><Star /></div>
+       </div>
     </div>
   </div>
 </div>

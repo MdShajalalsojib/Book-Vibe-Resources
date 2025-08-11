@@ -1,5 +1,6 @@
 import React, { useEffect,useState } from 'react';
 import Books from '../Books/Books';
+import { Suspense } from 'react';
 
 const Book = ({data}) => {
 
@@ -18,9 +19,12 @@ const Book = ({data}) => {
         <div>
             <h1 className='text-center font-bold text-3xl'>Books</h1>
             <Suspense fallback = {<span>Loading.....</span>}>
-              {
-                data.map((singleBook)=><Books key={singleBook.bookId} singleBook={singleBook}></Books>)
-              }
+               <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-6 mb-6'>
+                {
+                data.map((singleBook)=><Books key={singleBook.bookId} 
+                singleBook={singleBook}></Books>)
+                  }
+               </div>
             </Suspense>
         </div>
     );

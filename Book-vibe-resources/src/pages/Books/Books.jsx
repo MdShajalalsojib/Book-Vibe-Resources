@@ -1,13 +1,16 @@
- import { Star } from 'lucide-react';
-import React, { use } from 'react';
+
+ import { Link, NavLink , Star} from 'react-router';
+ import React, { use } from 'react';
+ 
 
 const Books = ({singleBook}) => {
     // const data = use(bookPromise);
 
     // console.log(data)
-    const {bookName, author,image,category,rating} = singleBook;
+    const {bookName, author,image,category,rating,bookId} = singleBook;
     return (
-         <div className="card bg-white w-96 shadow-sm border ">
+          <Link to={`bookDetails/${bookId}`}>
+           <div className="card bg-white w-96 shadow-sm border ">
       <figure className='p-3 bg-gray-300 w-2/3 mx-auto mt-5'>
           <div >
             <img className='h-[166px] mt-10 mb-10' src= {image} alt="Shoes" />
@@ -33,6 +36,7 @@ const Books = ({singleBook}) => {
     </div>
   </div>
 </div>
+          </Link>
     );
 };
 

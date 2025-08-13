@@ -1,5 +1,5 @@
 
- import { Link, NavLink , Star} from 'react-router';
+ import { Link, NavLink   } from 'react-router';
  import React, { use } from 'react';
  
 
@@ -31,7 +31,7 @@ const Books = ({singleBook}) => {
       <div className="  text-black">{category}</div>
        <div className='flex gap-2'>
         <div className="  text-black">{rating} </div>
-      <div className='text-black'><Star /></div>
+      <div className='text-black'> </div>
        </div>
     </div>
   </div>

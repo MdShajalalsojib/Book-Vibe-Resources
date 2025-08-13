@@ -9,6 +9,7 @@ import Home from '../pages/Home/Home';
 import Roods from '../pages/Rood/Roods';
 import About from '../pages/About/About';
 import BookDetails from '../pages/BookDetails/BookDetails';
+import ReadList from '../pages/ReadList/ReadList';
 export const router = createBrowserRouter([
   {
     path: "/",
@@ -24,6 +25,10 @@ export const router = createBrowserRouter([
         {
           path:'/about',
           Component:About
+        },
+        {
+          path:'readList',
+          Component:ReadList
         },
         {
           path:'/bookDetails/:id',

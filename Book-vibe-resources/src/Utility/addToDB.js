@@ -20,4 +20,4 @@ const getStoredBook=( )=>{
         localStorage.setItem("readList",data)
     }
  }
- export{storedBookDB}
+ export{storedBookDB,getStoredBook}
